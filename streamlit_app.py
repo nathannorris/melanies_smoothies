@@ -12,7 +12,7 @@ st.write(
 
 # Get the current credentials
 
-cnx = st.connectoin("snowflake")
+cnx = st.connection("snowflake")
 session = cnx.session()
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
