@@ -20,6 +20,8 @@ session = cnx.session()
 #session = get_active_session()
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),col('SEARCH_ON'))
+search_on=pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen, 'SEARCH_ON'].iloc[0]
+
 #st.dataframe(data=my_dataframe, use_container_width=True)
 #st.stop()
 
